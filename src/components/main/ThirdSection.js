@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Buffer } from "buffer"
 import Song from './Song'
 const client_id = "8a0ed990f5654dbabed7d2d7fa3d5f4d"
-const client_secret = "9627605a809c4eff83b88c4b623b1e6a"
+
 const url_token = "https://accounts.spotify.com/api/token"
 const url_album = "https://api.spotify.com/v1/albums"
 
