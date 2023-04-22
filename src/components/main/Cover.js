@@ -3,7 +3,7 @@ import CoverAlbum from "../../assests/cover.png"
 
 export default function Cover() {
     return (
-        <div>
+        <div className='cover'>
             <div>
                 <p>
                     <span>Instinct</span>— Released May 22, 2020

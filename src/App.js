@@ -8,8 +8,8 @@ export default function App() {
   return (
     <div className="App">
       <Background/>
-      <Header id="header" />
-      <Main id="main" />
+      <Header/>
+      <Main />
       <Footer id="footer" />
     </div>
   );

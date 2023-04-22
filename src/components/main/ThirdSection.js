@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Buffer } from "buffer"
 import Song from './Song'
+
 const url_token = "https://accounts.spotify.com/api/token"
 const url_album = "https://api.spotify.com/v1/albums"
+const client_id = process.env.REACT_APP_CLIENT_ID
+const client_secret = process.env.REACT_APP_SECRET_ID
 
 export default function ThirdSection() {
     const [songs, setSongsData] = useState([])
-
+    
     useEffect(() => {
         fetch(url_token, {
             method: "POST",
