@@ -1,0 +1,105 @@
+/*
+    COVER IMG
+*/
+
+#main > section:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main > section:first-child > .cover {
+    padding-top: 13rem;
+    width: 28rem;
+    position: relative;
+}
+
+#main > section:first-child > .cover > div > p {
+    position: absolute;
+    transform: rotate(-90deg);
+    bottom: 25%;
+    left: -44%;
+}
+
+#main > section:first-child > .cover > div > p,
+#main > section:first-child > .cover > div > p > span {
+    font-size: 1.3rem;
+    color: var(--white-color);
+    font-style: italic;
+}
+
+#main > section:first-child > .cover > div > p > span {
+    color: var(--green-color);
+    font-weight: bold;
+}
+
+#main > section:first-child > .cover > img {
+    width: 100%;
+}
+
+/*
+    CONVER INFO
+*/
+
+#main > section:first-child > .cover-info {
+    width: 30rem;
+    margin-left: 3rem;
+    padding-top: 10rem;
+}
+
+#main > section:first-child > .cover-info > h1 {
+    font-size: 4rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: var(--white-color);
+    font-family: 'League Gothic', sans-serif;
+    word-break: break-word;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--white-color);
+    -webkit-text-fill-color:transparent;
+}
+
+#main > section:first-child > .cover-info > p {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: var(--white-color);
+}
+
+#main > section:first-child > .cover-info > div {
+    margin-top: 4rem;
+}
+
+#main > section:first-child > .cover-info > div > button {
+    color: var(--white-color);
+    background-color: var(--green-color);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    font-family: 'League Gothic', sans-serif;;
+    text-transform: uppercase;
+    padding: 0.8rem 3.1rem;
+    border: 1px solid var(--green-strong-color);
+    display: flex;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+#main > section:first-child > .cover-info > div > button:last-child {
+    background-color: transparent;
+    border: 1px solid var(--white-color);
+}
+
+#main > section:first-child > .cover-info > div > button > i {
+    font-size: 2.1rem;
+    padding-right: 6px;
+}
+
+#main > section:first-child > .cover-info > div > button:hover {
+    background-color: var(--white-color);
+    border: 1px solid var(--white-color);
+    color: black;
+}
+
+

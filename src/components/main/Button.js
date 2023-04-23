@@ -4,7 +4,7 @@ import 'boxicons'
 export default function Button({icon_name, button_action}) {
   return (
     <button>
-        <box-icon name={icon_name}></box-icon>
+        <i class={`bx bx-${icon_name}`} ></i>
         {button_action ? button_action : ""}
     </button>
   )

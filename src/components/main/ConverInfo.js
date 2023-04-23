@@ -3,7 +3,7 @@ import Button from './Button'
 
 export default function ConverInfo() {
   return (
-    <div>
+    <div className='cover-info'>
         <h1>Call Me If You Get Lost: The Estate Sale</h1>
         <p>Tyler, The Creator</p>
         <div>

@@ -6,10 +6,10 @@ export default function Cover() {
         <div className='cover'>
             <div>
                 <p>
-                    <span>Instinct</span>— Released May 22, 2020
+                    <span>Instinct</span>— Released March 31, 2023
                 </p>
             </div>
-            <img src={CoverAlbum} alt="" />
+            <img src={CoverAlbum} alt=" idk a text equisde" />
         </div>
     )
 }
