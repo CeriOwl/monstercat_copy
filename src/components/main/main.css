@@ -69,6 +69,8 @@
 }
 
 #main > section:first-child > .cover-info > div {
+    display: flex;
+    justify-content: space-between;
     margin-top: 4rem;
 }
 
@@ -77,7 +79,7 @@
     background-color: var(--green-color);
     font-size: 1.8rem;
     letter-spacing: 2px;
-    font-family: 'League Gothic', sans-serif;;
+    font-family: 'League Gothic', sans-serif;
     text-transform: uppercase;
     padding: 0.8rem 3.1rem;
     border: 1px solid var(--green-strong-color);
@@ -100,6 +102,103 @@
     background-color: var(--white-color);
     border: 1px solid var(--white-color);
     color: black;
+}
+
+/*
+    SECOND SECTION
+*/
+
+#main > section:nth-child(2) {
+    width: 64rem;
+    margin: 0 auto;
+}
+
+#main > section:nth-child(2) > h2 {
+    color: var(--white-color);
+    font-family: 'League Gothic', sans-serif;
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    padding: 7rem 0 0 0;
+    letter-spacing: 5px;
+}
+
+#main > section:nth-child(2) > div {
+    display: flex;
+}
+
+#main > section:nth-child(2) > div > .icon-second-part {
+    border: 1px solid var(--white-color);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+#main > section:nth-child(2) > div > .icon-second-part > a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-family: 'League Gothic', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    display: flex;
+    position: relative;
+    transition: 500ms;
+}
+
+#main > section:nth-child(2) > div > .icon-second-part > .title {
+    opacity: 0%;
+    color: black;
+    background-color: var(--white-color);
+    position: absolute;
+    font-size: 1.4rem;
+    top: -24px;
+    padding: 5px 10px;
+    width: max-content;
+    text-transform: uppercase;
+    font-family: 'League Gothic', sans-serif;
+    transition: 500ms;
+    z-index: 3;
+}
+
+#main > section:nth-child(2) > div > .icon-second-part:first-child > .title {
+    left: -25%;
+}
+
+#main > section:nth-child(2) > div > .icon-second-part:nth-child(2) > .title {
+    left: -55%;
+}
+
+#main > section:nth-child(2) > div > .icon-second-part:nth-child(3) > .title,
+#main > section:nth-child(2) > div > .icon-second-part:nth-child(4) > .title {
+    left: -60%;
+}
+
+#main > section:nth-child(2) > div > .icon-second-part:nth-child(5) > .title {
+    left: -48%;
+}
+#main > section:nth-child(2) > div > .icon-second-part:nth-child(6) > .title {
+    left: -45%;
+}
+
+#main > section:nth-child(2) > div > .icon-second-part > a:hover ~ .title {
+    opacity: 100%;
+}
+
+#main > section:nth-child(2) > div > .icon-second-part > .title::after {
+    content: "";
+    background-color: var(--white-color);
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    bottom: -7px;
+    left: calc(50% - (15px / 2));
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+#main > section:nth-child(2) > div > .icon-second-part > a > i {
+    color: var(--white-color);
+    font-size: 1.8rem;
 }
 
 

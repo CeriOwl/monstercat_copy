@@ -2,12 +2,12 @@ import React from 'react'
 import ButtonStream from './ButtonStream'
 
 const streams = [
-  { icon_name: "play", icon_type: "", icon_text: "player" },
-  { icon_name: "compass", icon_type: "solid", icon_text: "" },
-  { icon_name: "soundcloud", icon_type: "logo", icon_text: "" },
-  { icon_name: "apple", icon_type: "logo", icon_text: "" },
-  { icon_name: "youtube", icon_type: "logo", icon_text: "" },
-  { icon_name: "spotify", icon_type: "logo", icon_text: "" }
+  { icon_name: "bx-play", icon_text: "player", title: "Monstercat Player" },
+  { icon_name: "bxs-compass", icon_text: "", title: "Bandcamp" },
+  { icon_name: "bxl-soundcloud", icon_text: "", title: "Soundcloud" },
+  { icon_name: "bxl-apple", icon_text: "", title: "Apple Music" },
+  { icon_name: "bxl-youtube", icon_text: "", title: "Youtube" },
+  { icon_name: "bxl-spotify", icon_text: "", title: "Spotify" }
 ]
 
 export default function SecondSection() {
@@ -17,7 +17,7 @@ export default function SecondSection() {
         <div>
           {
             streams.map((stream) => {
-              return <ButtonStream icon_name={stream.icon_name} icon_type={stream.icon_type} icon_text={stream.icon_text} />
+              return <ButtonStream icon_name={stream.icon_name} title={stream.title} icon_text={stream.icon_text} />
             })
           }
         </div>
