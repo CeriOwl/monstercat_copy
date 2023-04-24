@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ThirdPart() {
     return (
-        <div>
+        <div className='third-part'>
             <p>
                 We acknowledge with gratitude the traditional, ancestral and unceded land of the Coast Salish peoples, including the territories of the Sḵwx̱wú7mesh (Squamish), Stó:lō and Səl̓ílwətaʔ/Selilwitulh (Tsleil-Waututh) and xʷməθkʷəy̓əm (Musqueam) Nations, on which Monstercat's Vancouver HQ stands.
             </p>

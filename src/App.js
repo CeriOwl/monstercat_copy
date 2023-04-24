@@ -9,8 +9,8 @@ export default function App() {
     <div className="App">
       <Background/>
       <Header/>
-      <Main />
-      <Footer id="footer" />
+      <Main/>
+      <Footer/>
     </div>
   );
 }

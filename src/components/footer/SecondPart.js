@@ -2,30 +2,30 @@ import React from 'react'
 import LinkIcon from './LinkIcon'
 
 const icons = [
-    "youtube",
-    "instagram",
-    "tiktok",
-    "twitter",
-    "spotify",
-    "apple",
-    "twitch",
-    "facebook-circle",
-    "discord",
-    "reddit",
-    "play-circle"
+    "bxl-youtube",
+    "bxl-instagram",
+    "bxl-tiktok",
+    "bxl-twitter",
+    "bxl-spotify",
+    "bxl-apple",
+    "bxl-twitch",
+    "bxl-facebook-circle",
+    "bxl-discord",
+    "bxl-reddit",
+    "bx-play-circle"
 ]
 
 export default function SecondPart() {
   return (
-    <section>
+    <section className='second-part'>
         <p>2011 - 2023 © Monstercat, All Rights Reserved</p>
-        <div>
+        <nav>
             <ul>
                 {
                     icons.map(icon => <LinkIcon icon_name={icon}/>)
                 }
             </ul>
-        </div>
+        </nav>
     </section>
   )
 }
