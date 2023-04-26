@@ -2,44 +2,88 @@
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+}
+
+#header > div {
     padding: 2rem 3.5rem;
+    position: relative;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     z-index: 3;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
-#header > a > img{
-    width: 50px;
+@media screen and (min-width: 1840px) {
+    #header > div {
+        max-width: 2100px;
+    }
 }
-#header > button {
+
+@media screen and (max-width: 1240px) {
+    #header > div {
+        background-color: var(--black-header-color);
+    }
+}
+
+#header > div > a > img {
+    width: 50px;
+    position: relative;
+}
+#header > div > button {
     background-color: transparent;
     border: 0;
 }
-#header > button > i{
+#header > div > button > i{
     color: var(--white-color);
     font-size: 2.2rem;
     cursor: pointer;
 }
 
-#header > nav {
+#header > div > nav {
     position: absolute;
     right: 0;
     top: 120px;
     margin-right: 3.85rem;
 }
-#header > nav > ul {
+
+@media screen and (max-width: 1240px) {
+    #header > div > nav {
+        position: initial;
+        margin-right: 0;
+    }
+}
+
+#header > div > nav > ul {
     display: flex;
     flex-direction: column;
     height: 250px;
 }
 
-#header > nav > ul > li {
+@media screen and (max-width: 1240px) {
+    #header > div > nav > ul {
+        flex-direction: row;
+        height: 100%;
+        column-gap: 20px;
+    }
+}
+
+#header > div > nav > ul > li {
     list-style: none;
 }
 
-#header > nav > ul > li > a > i {
+#header > div > nav > ul > li > a > i {
     color: var(--white-color);
     font-size: 1.4rem;
     padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1240px) {
+    #header > div > nav > ul > li > a > i {
+        padding-bottom: 0;
+        font-size: 2.3rem;
+    }
 }

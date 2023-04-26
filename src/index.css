@@ -5,6 +5,7 @@
   --green-color: #50A584;
   --green-strong-color: #50A584;
   --gray-color: #898888;
+  --black-header-color: rgba(0, 0, 0, 0.7);
 }
 
 * {

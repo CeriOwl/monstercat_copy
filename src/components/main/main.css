@@ -6,19 +6,55 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 13rem;
 }
 
+@media screen and (max-width: 990px) {
+    #main > section:first-child {
+        flex-direction: column;
+    }
+}
+
+
 #main > section:first-child > .cover {
-    padding-top: 13rem;
     width: 28rem;
     position: relative;
+    z-index: -1;
+}
+
+@media screen and (min-width: 1840px) {
+    #main > section:first-child > .cover {
+        width: 58rem;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    #main > section:first-child > .cover {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 50rem;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #main > section:first-child > .cover {
+        width: 30rem;
+    }
 }
 
 #main > section:first-child > .cover > div > p {
     position: absolute;
     transform: rotate(-90deg);
-    bottom: 25%;
-    left: -44%;
+    bottom: 160px;
+    left: -180px;
+}
+
+@media screen and (max-width: 820px) {
+    #main > section:first-child > .cover > div > p {
+        position: initial;
+        transform: rotate(0deg);
+        padding-top: 50px;
+    }
 }
 
 #main > section:first-child > .cover > div > p,
@@ -26,6 +62,13 @@
     font-size: 1.3rem;
     color: var(--white-color);
     font-style: italic;
+}
+
+@media screen and (max-width: 820px) {
+    #main > section:first-child > .cover > div > p,
+    #main > section:first-child > .cover > div > p > span {
+        font-size: 1.1rem;    
+    }
 }
 
 #main > section:first-child > .cover > div > p > span {
@@ -42,9 +85,27 @@
 */
 
 #main > section:first-child > .cover-info {
-    width: 30rem;
+    max-width: 30rem;
     margin-left: 3rem;
-    padding-top: 10rem;
+}
+
+@media screen and (min-width: 1840px) {
+    #main > section:first-child > .cover-info {
+        max-width: 45rem;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    #main > section:first-child > .cover-info {
+        max-width: 54rem;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #main > section:first-child > .cover-info {
+        max-width: 30rem;
+    }
 }
 
 #main > section:first-child > .cover-info > h1 {
@@ -60,6 +121,18 @@
     -webkit-text-fill-color:transparent;
 }
 
+@media screen and (min-width: 1840px) {
+    #main > section:first-child > .cover-info > h1 {
+        font-size: 6rem;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #main > section:first-child > .cover-info > h1 {
+        font-size: 3.3rem;
+    }
+}
+
 #main > section:first-child > .cover-info > p {
     font-size: 2rem;
     font-weight: bold;
@@ -67,11 +140,28 @@
     margin-top: 10px;
     color: var(--white-color);
 }
+@media screen and (min-width: 1840px) {
+    #main > section:first-child > .cover-info > p {
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #main > section:first-child > .cover-info > p {
+        font-size: 1.5rem;
+    }
+}
 
 #main > section:first-child > .cover-info > div {
     display: flex;
-    justify-content: space-between;
+    column-gap: 10px;
     margin-top: 4rem;
+}
+
+@media screen and (max-width: 820px) {
+    #main > section:first-child > .cover-info > div {
+        margin-top: 2rem;
+    }
 }
 
 #main > section:first-child > .cover-info > div > button {
@@ -88,6 +178,13 @@
     transition: 300ms;
 }
 
+@media screen and (max-width: 820px) {
+    #main > section:first-child > .cover-info > div > button {
+        font-size: 1.2rem;
+        padding: 0.8rem 2.1rem;
+    }
+}
+
 #main > section:first-child > .cover-info > div > button:last-child {
     background-color: transparent;
     border: 1px solid var(--white-color);
@@ -96,6 +193,12 @@
 #main > section:first-child > .cover-info > div > button > i {
     font-size: 2.1rem;
     padding-right: 6px;
+}
+
+@media screen and (max-width: 820px) {
+    #main > section:first-child > .cover-info > div > button > i {
+        font-size: 1.4rem;
+    }
 }
 
 #main > section:first-child > .cover-info > div > button:hover {
@@ -114,6 +217,27 @@
     margin: 0 auto;
 }
 
+@media screen and (min-width: 1840px) {
+    #main > section:nth-child(2),
+    #main > section:nth-child(3) {
+        width: 110rem;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    #main > section:nth-child(2),
+    #main > section:nth-child(3) {
+        width: 54rem;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #main > section:nth-child(2),
+    #main > section:nth-child(3) {
+        width: 30rem;
+    }
+}
+
 #main > section:nth-child(2) > h2,
 #main > section:nth-child(3) > h2 {
     color: var(--white-color);
@@ -122,6 +246,13 @@
     text-transform: uppercase;
     padding: 7rem 0 0 0;
     letter-spacing: 5px;
+}
+
+@media screen and (max-width: 820px) {
+    #main > section:nth-child(2) > h2,
+    #main > section:nth-child(3) > h2 {
+        font-size: 3.5rem;
+    }
 }
 
 #main > section:nth-child(2) > div {
@@ -135,6 +266,12 @@
     position: relative;
 }
 
+@media screen and (max-width: 820px) {
+    #main > section:nth-child(2) > div > .icon-second-part {
+        padding: 1rem;
+    }
+}
+
 #main > section:nth-child(2) > div > .icon-second-part > a {
     text-decoration: none;
     color: var(--white-color);
@@ -145,6 +282,12 @@
     display: flex;
     position: relative;
     transition: 500ms;
+}
+
+@media screen and (max-width: 820px) {
+    #main > section:nth-child(2) > div > .icon-second-part > a {
+        font-size: 1.2rem;
+    }
 }
 
 #main > section:nth-child(2) > div > .icon-second-part > .title {
@@ -162,8 +305,20 @@
     z-index: 3;
 }
 
+@media screen and (max-width: 820px) {
+    #main > section:nth-child(2) > div > .icon-second-part > .title {
+        font-size: 0.9rem;
+    }
+}
+
 #main > section:nth-child(2) > div > .icon-second-part:first-child > .title {
     left: -25%;
+}
+
+@media screen and (max-width: 820px) {
+    #main > section:nth-child(2) > div > .icon-second-part:first-child > .title {
+        left: -18%;
+    }
 }
 
 #main > section:nth-child(2) > div > .icon-second-part:nth-child(2) > .title {
@@ -203,6 +358,12 @@
     font-size: 1.8rem;
 }
 
+@media screen and (max-width: 820px) {
+    #main > section:nth-child(2) > div > .icon-second-part > a > i {
+        font-size: 1.3rem;
+    }
+}
+
 /*
     THIRD SECTION
 */
@@ -228,10 +389,22 @@
     align-content: center;
 }
 
+@media screen and (max-width: 820px) {
+    #main > section:nth-child(3) > div > .song {
+        grid-template-columns: 1fr 1fr 60% 1fr 1fr;
+    }
+}
+
 #main > section:nth-child(3) > div > .song > .id {
     font-size: 1.4rem;
     color: var(--white-color);
     width: min-content;
+}
+
+@media screen and (max-width: 820px) {
+    #main > section:nth-child(3) > div > .song > .id {
+        font-size: 1.2rem;
+    }
 }
 
 #main > section:nth-child(3) > div > .song > .button-play,
@@ -247,6 +420,13 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 820px) {
+    #main > section:nth-child(3) > div > .song > .button-play > i,
+    #main > section:nth-child(3) > div > .song > .button-share > i {
+        font-size: 2rem;
+    }
+}
+
 #main > section:nth-child(3) > div > .song > .titles {
     display: flex;
     flex-direction: column;
@@ -258,11 +438,25 @@
     font-size: 1.2rem;
 }
 
+@media screen and (max-width: 820px) {
+    #main > section:nth-child(3) > div > .song > .titles > span:first-child {
+        font-size: 0.6rem;
+    }
+}
+
 #main > section:nth-child(3) > div > .song > .duration {
     color: var(--white-color);
     font-size: 1.2rem;
     padding: 0 20px 0 0;
 }
+
+@media screen and (max-width: 820px) {
+    #main > section:nth-child(3) > div > .song > .duration {
+        font-size: 1rem;
+    }
+}
+
+
 
 #main > section:nth-child(3) > div > .song > .button-share > i {
     font-size: 1.5rem;

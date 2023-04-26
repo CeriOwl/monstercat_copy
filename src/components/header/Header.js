@@ -7,9 +7,11 @@ import "./header.css"
 export default function Header() {
   return (
     <header id="header">
+      <div>
         <LogoMonstercat/>
-        <ButtonMenu/>
         <Navbar/>
+        <ButtonMenu/>
+      </div>
     </header>
   )
 }

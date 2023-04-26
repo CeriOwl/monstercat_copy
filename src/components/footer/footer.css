@@ -4,6 +4,24 @@
     margin: 0 auto;
 }
 
+@media screen and (min-width: 1840px) {
+    #footer {
+        width: 110rem;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    #footer {
+        width: 54rem;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #footer {
+        width: 30rem;
+    }
+}
+
 /*
     FIRST PART
 */
@@ -18,10 +36,22 @@
     margin-top: 8rem;
 }
 
+@media screen and (max-width: 820px) {
+    #footer > .first-part > hr:first-child {
+        margin-top: 6rem;
+    }
+}
+
 #footer > .first-part > .container-links-footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 4rem 0;
+}
+
+@media screen and (max-width: 820px) {
+    #footer > .first-part > .container-links-footer {
+        grid-template-columns: 1fr;
+    }
 }
 
 #footer > .first-part > .container-links-footer > nav > li {
@@ -38,9 +68,23 @@
     color: var(--white-color);
 }
 
+@media screen and (max-width: 820px) {
+    #footer > .first-part > .container-links-footer > nav > li > a,
+    #footer > .first-part > .container-links-footer > div > h3 {
+        font-size: 1.8rem;
+    }
+}
+
 #footer > .first-part > .container-links-footer > div > h3 {
     color: var(--gray-color);
 }
+
+@media screen and (max-width: 820px) {
+    #footer > .first-part > .container-links-footer > div > h3 {
+        padding-top: 5rem;
+    }
+}
+
 #footer > .first-part > .container-links-footer > div > p {
     color: var(--white-color);
     font-style: italic;
@@ -61,6 +105,12 @@
     font-size: 1.5rem;
     color: var(--white-color);
     margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 820px) {
+    #footer > .first-part > .container-links-footer > div > form > input {
+        font-size: 1.1rem;
+    }
 }
 
 #footer > .first-part > .container-links-footer > div > form > input:focus {
@@ -102,8 +152,16 @@
     margin: 3rem 0;
 }
 
+@media screen and (max-width: 820px) {
+    #footer > .second-part {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+}
+
 #footer > .second-part > p {
     color:  var(--white-color);
+    font-style: italic;
 }
 
 #footer > .second-part > nav > ul {
