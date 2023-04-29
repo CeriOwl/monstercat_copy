@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Song({ id, name_song, artist, duration }) {
+export default function Song({ id, name_song, artists_names, duration }) {
   return (
     <div className='song'>
         <span className='id'>{id}</span>
@@ -9,7 +9,7 @@ export default function Song({ id, name_song, artist, duration }) {
         </button>
         <div className='titles'>
             <span className='song-name'>{name_song}</span>
-            <span className='artist-name'>{artist}</span>
+            <span className='artist-name'>{artists_names}</span>
         </div>
         <span className='duration'>{duration}</span>
         <button className='button-share'>

@@ -1,15 +1,15 @@
-import React from 'react'
-import CoverAlbum from "../../assests/cover.png"
+import React, { useEffect } from 'react'
 
-export default function Cover() {
+export default function Cover({cover_image, date_release}) {
+    
     return (
         <div className='cover'>
             <div>
                 <p>
-                    <span>Instinct</span>— Released March 31, 2023
+                    <span>Instinct</span>— Released {date_release}
                 </p>
             </div>
-            <img src={CoverAlbum} alt=" idk a text equisde" />
+            <img src={cover_image} alt="The image cover of the album" />
         </div>
     )
 }

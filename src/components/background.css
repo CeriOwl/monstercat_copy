@@ -12,7 +12,6 @@
 .background-album > .background-image {
     height: 105%;
     width: 105%;
-    background-image: url("../assests/cover.png");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center;
