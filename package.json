@@ -1,5 +1,4 @@
 {
-  "homepage": "http://CeriOwl.github.io/monstercat_copy",
   "name": "monstercattyler",
   "version": "0.1.0",
   "private": true,
@@ -15,7 +14,6 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,7 +38,6 @@
     ]
   },
   "devDependencies": {
-    "dotenv-webpack": "^8.0.1",
-    "gh-pages": "^5.0.0"
+    "dotenv-webpack": "^8.0.1"
   }
 }

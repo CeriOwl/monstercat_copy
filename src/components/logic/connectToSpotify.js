@@ -15,6 +15,7 @@ export default function getData(id_album = "1GG6U2SSJPHO6XsFiBzxYv") {
         body: "grant_type=client_credentials"
     }).then(response => response.json())
         .then(data => {
+            console.log(data)
             const tracks = fetch(`${url_album}/${id_album}/tracks?limit=50`, {
                 method: "GET",
                 headers: {
