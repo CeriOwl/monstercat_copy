@@ -1,6 +1,5 @@
 import React from 'react'
 import Song from './Song'
-import getData from '../logic/connectToSpotify'
 
 export default function ThirdSection({songs, artists_names}) {
     return (
