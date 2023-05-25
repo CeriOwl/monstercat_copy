@@ -8,12 +8,11 @@ import getAlbum from "./components/logic/getAlbum";
 export default function App() {
   const [id_album, setIdAlbum] = useState("1GG6U2SSJPHO6XsFiBzxYv")
   const [album_data, setAlbumData] = useState({})
-
+  
   useEffect(() => {
     getAlbum(id_album).then(album => setAlbumData(album))
   }, [id_album])
-
-  console.log(album_data)
+  
   return (
     <div className="App">
       <Background image_background={album_data.image_album}/>

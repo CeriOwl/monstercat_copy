@@ -5,7 +5,7 @@ export default function getAlbum(id_album = "1GG6U2SSJPHO6XsFiBzxYv") {
   return getAlbumInfo(id_album, url_album)
 }
 
-const getAlbumInfo = async (id_album, url_album) => {
+async function getAlbumInfo(id_album, url_album) {
   return getTokenSpotify().then(token => {
     const tracks = fetch(`${url_album}/${id_album}`, {
       method: "GET",
@@ -14,13 +14,13 @@ const getAlbumInfo = async (id_album, url_album) => {
       }
     })
     return tracks.then(response => response.json())
-    .then(data_album => {
+    .then(data => {
       return {
-        name_album : data_album.name,
-        image_album : data_album.images[0].url,
-        artist_names : formatNames(data_album.artists),
-        date: formatDateRelease(data_album.release_date),
-        tracks: formatTracks(data_album.tracks.items)
+        name_album : data.name,
+        image_album : data.images[0].url,
+        artist_names : formatNames(data.artists),
+        date: formatDateRelease(data.release_date),
+        tracks: formatTracks(data.tracks.items)
       }
     })
   })
