@@ -1,5 +1,36 @@
 import getTokenSpotify from "./getTokenSpotify"
 
+
+export default function getArtists(artist) {
+  const url_album = `https://api.spotify.com/v1/search?q=${artist}&type=artist`
+  return searchId(url_album)
+}
+
+const searchId = async url_album => {
+  return getTokenSpotify().then(token => {
+    return fetch(url_album, {
+      method: "GET",
+      headers: {
+        "Authorization": `Bearer ${token}`
+      }
+    })
+    .then(response => response.json())
+    .then(data => getAllData(data.artists.items))
+  })
+}
+
+const getAllData = data => {
+  return data.map(artist => {
+    return {
+      id: artist.id,
+      name: artist.name,
+      img: artist.images[0].url
+    }
+  })
+}
+/*
+## Original code
+
 export default function getIdAlbum(artist, album) {
   const url_album = `https://api.spotify.com/v1/search?q=${artist}:${album}&type=artist%2Calbum&limit=1`
   return searchId(url_album)
@@ -27,3 +58,5 @@ const getId = data => {
   }
   return -1
 }
+
+*/
