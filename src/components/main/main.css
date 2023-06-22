@@ -623,10 +623,83 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    overflow-y: scroll;
+    width: 100%;
+    height: 100vh;
+    padding: 2.5em;
+    display: none;
+    overflow: hidden;
+}
+
+.artists-selection::after {
+    content: "";
+    top: -110%;
+    left: -50%;
+    height: 300%;
+    width: 300%;
+    opacity: 0.9;
+    position: fixed;
+    background-image: url("../../assests/bg_static.webp");
+    background-position: center;
+    z-index: -2;
+    animation: grain 400ms infinite;
+}
+
+.open-artists {
+    display: block;
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-bottom-left both;
+}
+
+.close-artists {
+    display: block;
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-out-top-right both;
+}
+
+.artists-selection > .container-titles-btn >  h1 {
+    color: var(--white-color);
+    font-family: 'League Gothic', sans-serif;
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+
+@keyframes square-out-top-right {
+    from {
+      clip-path: inset(0 0 0 0);
+    }
+    to {
+      clip-path: inset(0 0 100% 100%);
+    }
+  }
+
+@keyframes square-in-bottom-left {
+    from {
+      clip-path: inset(0 0 100% 100%);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+}
+
+.artists-selection > .container-titles-btn {
+    position: relative;
+}
+
+.artists-selection > .container-titles-btn > i {
+    font-size: 2.5rem;
+    color: var(--white-color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.container-artists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: scroll;
 }
 
 .hidden-element {
-    display: none;
+    display: none !important;
 }

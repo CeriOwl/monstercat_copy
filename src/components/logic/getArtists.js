@@ -24,10 +24,18 @@ const getAllData = data => {
     return {
       id: artist.id,
       name: artist.name,
-      img: artist.images[0].url
+      img: getImage(artist.images)
     }
   })
 }
+
+const getImage = images => {
+  if(images.length !== 0) {
+    return images[0].url
+  }
+  return undefined 
+}
+
 /*
 ## Original code
 
