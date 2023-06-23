@@ -624,10 +624,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
     padding: 2.5em;
     display: none;
-    overflow: hidden;
+    
 }
 
 .artists-selection::after {
@@ -694,10 +693,57 @@
     right: 0;
 }
 
-.container-artists {
+.container-artists,
+.container-album {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    overflow: scroll;
+    grid-template-columns: repeat(auto-fit, minmax(244px, 1fr));
+    margin-top: 20px;
+    justify-items: center;
+    gap: 30px;
+}
+
+.card-artist,
+.card-album {
+    width: 200px;
+    padding: 20px;
+    box-sizing: content-box;
+    height: 310px;
+    border: 2px solid var(--white-color);
+    border-radius: 10px;
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card-artist:hover,
+.card-album:hover {
+    background-color: var(--white-color);
+}
+
+.card-artist > img,
+.card-album > img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1.2;
+}
+
+.card-album > img {
+    aspect-ratio: 1/1;
+}
+
+.card-artist > h2,
+.card-album > h2 {
+    font-size: 20px;
+    text-align: center;
+    color: var(--white-color);
+    padding-top: 10px;
+    transition: 300ms ease-out;
+}
+
+.card-artist:hover > h2,
+.card-album:hover > h2 {
+    color: black;
 }
 
 .hidden-element {

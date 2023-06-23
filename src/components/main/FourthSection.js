@@ -1,14 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import getArtists from '../logic/getArtists'
 import handleNotifications from '../logic/notifications'
 import IndividualArtist from './IndividualArtist'
+import IndividualAlbum from "./IndividualAlbum"
+import getAllAlbums from '../logic/getAllAlbums'
 
 export default function FourthSection({setIdAlbum}) {
   const [artist_name, setArtistNameSearch] = useState("")
   const [artists, setArists] = useState([])
-
   const [state_artists_search, setStateArtistsSearch] = useState(0)
-
+  const [artist_selected, setArtistSelected] = useState("")
+  const [albums, setAlbums] = useState([])
+  
+  useEffect(() => {
+    if(artist_selected !== "") {
+      getAllAlbums(artist_selected).then(albums_data => setAlbums(albums_data))
+    }
+  }, [artist_selected])
+  
   const handleName = name => {
     setArtistNameSearch(name.target.value)
   }
@@ -16,7 +25,6 @@ export default function FourthSection({setIdAlbum}) {
   const handleSearch = () => {
     if(artist_name !== "") {
       getArtists(artist_name).then(artist => {
-        console.log(artist)
         setArists(artist)
         handleNotifications("existence")
       })
@@ -72,13 +80,22 @@ export default function FourthSection({setIdAlbum}) {
       </div>
 
       <div className='artists-selection' id='artist-selection'>
-        <div className='container-titles-btn'>
+        <div className='container-titles-btn sel-artist'>
           <h1>Select the artist</h1>
           <i onClick={() => switchElements(false)} class='bx bxs-x-square'></i>
         </div>
+        <div className='container-titles-btn sel-album'>
+          <h1>Select the album</h1>
+          <i onClick={() => switchElements(false)} class='bx bxs-left-arrow-square'></i>
+        </div>
         <div className='container-artists'>
           {
-            artists.length !== 0 ? artists.map(artist => <IndividualArtist id={artist.id} name={artist.name} image={artist.img} />) : ""
+            artists.length !== 0 ? artists.map(artist => <IndividualArtist setIdAlbum={setArtistSelected} id={artist.id} name={artist.name} image={artist.img} />) : ""
+          }
+        </div>
+        <div className='container-album'>
+          {
+            albums.length !== 0 ? albums.map(album => <IndividualAlbum setIdAlbum={setIdAlbum} id={album.id} name={album.name} image={album.image} />) : ""
           }
         </div>
       </div>

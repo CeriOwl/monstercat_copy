@@ -1,9 +1,11 @@
-export default function IndividualArtist({id, name, image}) {
+export default function IndividualArtist({setIdAlbum, id, name, image}) {
+  const handleIdAlbum = () => {
+    setIdAlbum(id)
+  }
+  
   return(
-    <div className="card-artist">
-      <div className="image-container">
-        <img src={image} />
-      </div>
+    <div onClick={handleIdAlbum} className="card-artist">
+      <img src={image} />
       <h2>{name}</h2>
     </div>
   )
