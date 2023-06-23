@@ -626,7 +626,6 @@
     width: 100%;
     padding: 2.5em;
     display: none;
-    
 }
 
 .artists-selection::after {
@@ -661,6 +660,30 @@
     letter-spacing: 5px;
 }
 
+@media screen and (max-width: 650px) {
+    .artists-selection > .container-titles-btn >  h1 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .artists-selection > .container-titles-btn >  h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .artists-selection > .container-titles-btn >  h1 {
+        font-size: 2.3rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .artists-selection > .container-titles-btn >  h1 {
+        font-size: 1.5rem;
+    }
+}
+
 
 @keyframes square-out-top-right {
     from {
@@ -682,6 +705,8 @@
 
 .artists-selection > .container-titles-btn {
     position: relative;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 .artists-selection > .container-titles-btn > i {
@@ -697,7 +722,8 @@
 .container-album {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(244px, 1fr));
-    margin-top: 20px;
+    max-width: 1500px;
+    margin: 20px auto;
     justify-items: center;
     gap: 30px;
 }
