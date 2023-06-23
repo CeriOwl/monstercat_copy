@@ -1,6 +1,9 @@
-export default function IndividualArtist({setIdAlbum, id, name, image}) {
+export default function IndividualArtist({clearInput, setSelectingAlbums, switchElements, setIdAlbum, id, name, image}) {
     const handleIdAlbum = () => {
+      clearInput()
       setIdAlbum(id)
+      switchElements(false)
+      setSelectingAlbums(0)
     }
     
     return(
