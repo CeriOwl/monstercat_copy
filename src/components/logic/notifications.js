@@ -10,14 +10,11 @@ const styles_notifications = {
 
 export default function handleNOtifications(notification) {
   switch(notification){
-    case "error_search" :
-      toast.error("Include the artist, please.", styles_notifications)
-      break
     case "no_existence" :
-      toast.error("Album no founded.", styles_notifications)
+      toast.error("Write the artist's name, please", styles_notifications)
       break
     case "existence" :
-      toast.success("Album encountered. Web paged.", styles_notifications)
+      toast.success("Good option! Changin web", styles_notifications)
       break
   }
 }

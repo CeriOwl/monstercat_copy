@@ -27,7 +27,6 @@ export default function FourthSection({ setIdAlbum }) {
     if (artist_name !== "") {
       getArtists(artist_name).then(artist => {
         setArists(artist)
-        handleNotifications("existence")
       })
       switchElements(true)
     } else {
@@ -116,7 +115,8 @@ export default function FourthSection({ setIdAlbum }) {
           selecting_albums === 1 ?
           <div className='container-album'>
             {
-              albums.length !== 0 ? albums.map(album => <IndividualAlbum clearInput={clearInput} setSelectingAlbums={setSelectingAlbums} switchElements={switchElements} setIdAlbum={setIdAlbum} id={album.id} name={album.name} image={album.image} />) : ""
+              // handleNotifications("existence")
+              albums.length !== 0 ? albums.map(album => <IndividualAlbum handleNotifications={handleNotifications} clearInput={clearInput} setSelectingAlbums={setSelectingAlbums} switchElements={switchElements} setIdAlbum={setIdAlbum} id={album.id} name={album.name} image={album.image} />) : ""
             }
           </div>
           : ""
